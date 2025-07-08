@@ -1,0 +1,487 @@
+/* General */
+body {
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    background: #f0f4f8;
+    color: #1e1e1e;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.25rem;
+}
+
+/* Hero */
+.hero {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #00144a, #000000); /* Fondo con gradiente negro y azul */
+    padding: 50px 0;
+}
+
+.hero-inner {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 50%;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #4fa8e1;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3678b4;
+}
+
+.hero-image {
+    max-width: 45%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Header y Secciones */
+.header, .section, .cta {
+    padding: 2.5rem 0;
+    background: transparent;
+    margin: 0;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    color: #1e1e1e;
+}
+
+.header h1, .cta h2 {
+    color: #1e0b40;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+}
+
+.header p {
+    border-top: 1px solid #4fa8e1;
+    padding-top: 1.25rem;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-image {
+    width: 50%;
+    order: 1;
+}
+
+.section-text {
+    width: 50%;
+    padding-left: 2rem;
+    order: 2;
+}
+
+.section-text h2 {
+    font-size: 2rem;
+    color: #1e0b40;
+    margin-bottom: 20px;
+}
+
+.section-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Beneficios */
+.benefits {
+    background: #ffffff00;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    color: #1e0b40;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, #afdcff, #f9f6ff);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: #1e0b40;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 1rem;
+    color: #1e1e1e;
+}
+
+/* Tabs - Cómo lo Hacemos */
+#como-lo-hacemos {
+    margin: 50px 0;
+    padding: 40px 20px;
+    background-color: #f7f9fc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#como-lo-hacemos h2 {
+    font-size: 2rem;
+    color: #1e0b40; /* Color del título */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.custom-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background: #f1c40f; /* Fondo amarillo */
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-tab-button {
+    flex: 1;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.custom-tab-button.active {
+    background-color: #00144a; /* Fondo azul oscuro para tabs activos */
+    color: #fff;
+}
+
+.custom-tab-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.custom-tab-pane {
+    display: none; /* Ocultar todas las pestañas por defecto */
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.custom-tab-pane.active {
+    display: flex; /* Mostrar la pestaña activa */
+}
+
+.custom-tab-pane img {
+    max-width: 40%;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: none; /* Sin sombras */
+}
+
+.custom-tab-pane p {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Testimonios - Estilo */
+.testimonial {
+    background: linear-gradient(135deg, #00144a, #000000); /* Gradiente negro y azul */
+    padding: 1.25rem;
+    border-radius: 15px;
+    width: 18.75rem;
+    min-width: 18.75rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Logo del cliente */
+.testimonial-logo {
+    width: 100%;
+    height: 7.5rem;
+    position: relative; /* Cambia de absolute a relative */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    z-index: 1;
+    margin-bottom: 1rem;
+}
+
+/* Imagen del cliente */
+.testimonial img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.625rem;
+    z-index: 2;
+    border: 0.188rem solid #fff;
+    background-color: rgba(30, 11, 64, 0.4);
+    position: relative;
+}
+
+/* Contenido del Testimonio */
+.testimonial-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    padding-top: 1rem;
+}
+
+/* Texto del testimonio */
+.testimonial p {
+    font-size: 0.875rem;
+    margin: 0.625rem 0;
+    z-index: 2;
+}
+
+/* Nombre del cliente */
+.testimonial h4 {
+    margin: 0.313rem 0;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Título del cliente */
+.testimonial p:last-child {
+    font-size: 0.8rem;
+    z-index: 2;
+}
+
+/* Flechas del slider */
+.slider-arrow {
+    background-color: transparent;
+    border: 0.125rem solid #19ADDC;
+    color: #19ADDC;
+    font-size: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #0d0d0d;
+    margin: 10% auto;
+    padding: 1.25rem;
+    border: 0.063rem solid #ccc;
+    width: 80%;
+    max-width: 50rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 37.5rem;
+    border: none;
+}
+
+.close {
+    color: #000000;
+    position: absolute;
+    top: 0.625rem;
+    right: 1.25rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #19ADDC;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .hero-inner {
+        width: 100%;
+    }
+
+    .header, .section, .cta {
+        padding: 1.25rem;
+    }
+
+    .testimonial {
+        width: 100%;
+        min-width: auto;
+        margin-right: 0;
+        margin-bottom: 1.25rem;
+    }
+
+    .slider {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .slider-arrow {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        margin-bottom: 20px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-content {
+        flex-direction: column;
+    }
+
+    .section-image, .section-text {
+        width: 100%;
+    }
+
+    .section-text {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .custom-tab-content .custom-tab-pane img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .custom-tab-content .custom-tab-pane p {
+        max-width: 100%;
+    }
+
+    .custom-tabs {
+        flex-wrap: wrap;
+    }
+}
